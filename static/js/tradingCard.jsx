@@ -7,15 +7,15 @@
 //   }
 // ]
 
-// function TradingCard(props) {
-//   return (
-//     <div className="card">
-//       <h2>Name: {props.name}</h2>
-//       <img src={props.imgUrl} />
-//       <h2>Skill: {props.skill}</h2>
-//     </div>
-//   );
-// }
+function TradingCard(props) {
+  return (
+    <div className="card">
+      <h2>Name: {props.name}</h2>
+      <img src={props.imgUrl} />
+      <h2>Skill: {props.skill}</h2>
+    </div>
+  );
+}
 
 // ReactDOM.render(
 //   (
@@ -123,31 +123,10 @@ const tradingCardData = [
   }
 ];
 
-// for (const card of tradingCardData) {
-//   console.log(card.name);
-//   console.log(card.skill);
-// }
-
-// function TradingCardContainer() {
-//   const tradingCards = [];
-//   for (const card of tradingCardData) {
-//     tradingCards.push(
-//       <TradingCard
-//       name={card.name}
-//       skill={card.skill}
-//       imgURL={card.imgURL}
-//     />
-//     );
-//   }
-
-//   return (
-//     <React.Fragment>
-//       {tradingCards}
-//     </React.Fragment>
-//   );
-// }
-
 function TradingCardContainer() {
+
+  console.log("this is a test");
+
   const tradingCards = [];
 
   for (const card of tradingCardData) {
@@ -156,6 +135,7 @@ function TradingCardContainer() {
         name={card.name}
         skill={card.skill}
         imgUrl={card.imgUrl}
+        key={card.name}
       />
     );
   }
